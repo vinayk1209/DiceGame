@@ -1,0 +1,175 @@
+/* page styling */
+body {
+    background-color:#393e46;
+    margin:0;
+    text-align: center;
+    color: #05a19c;
+    font-size: 2vw;
+    font-family:monospace;
+    width: 60%;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 26px;
+}
+
+/* page header */
+.header {
+    margin-bottom: 0;
+    padding-bottom:18px;
+    margin-top:0;
+}
+
+/* dificulty selector label */
+.dificulty-label {
+    font-size: 18px;
+    display: inline-block;
+}
+
+form {
+    margin-top:8px;
+    margin-bottom:10px;
+}
+
+/* draw message (you can share now) */
+.subtitle {
+    margin:0;
+    display: none;
+}
+
+/* two dices container */
+.dice-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    margin-bottom:28px;
+}
+
+/* boxes */
+.dice1-container, .dice2-container {
+    background-color: #ff4057;
+    height: 200px;
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 2%;
+    margin-top:30px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.096)
+}
+
+/* circles */
+.marbles {
+    width:38px;
+    height:38px;
+    border-radius: 100%;
+    background-color: #fcfcfc;
+}
+
+
+/* start button */
+a {
+    font-size: 19px;
+    color:white;
+    background-color:#ff4057;
+    padding:10px 32px;
+    cursor: pointer;
+    border-radius: 4px;
+    display:block;
+    width:58px;
+    margin: 0 auto;
+}
+
+/* page footer */
+.footer {
+    color:white;
+    font-size: 16px;
+    margin-top:60px;
+}
+
+/* hover effects */
+a:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.425)
+}
+
+/* aniamtions */
+.header, form, .player1, .player2, .footer {
+    animation: fadein .4s ease-in forwards 
+}
+
+.dice1-container, .dice2-container {
+    animation: left-push .5s ease-in forwards
+}
+
+.start {
+    animation: top-push .8s ease-in forwards
+}
+
+form {
+    animation: low-push .8s ease-in forwards
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0
+    }
+     to {
+         opacity: 1
+     }
+}
+
+@keyframes left-push {
+    from {
+        opacity: 0;
+        padding-right:10px;
+    }
+     to {
+        opacity:1;
+        padding-right:0px
+     }
+}
+
+@keyframes top-push {
+    from {
+        opacity: .3;
+        margin-top: 50px
+    }
+     to {
+        opacity:1;
+        margin-top:0px
+     }
+}
+
+@keyframes low-push {
+    from {
+        opacity: .2;
+        margin-top:0px;
+    }
+     to {
+        opacity:1;
+        margin-top:8px
+     }
+}
+
+/* media queries */
+
+@media screen and (max-width: 540px) {
+    .subtitle {
+      font-size: 20px;
+    }
+
+    .header {
+        margin-bottom:14px;
+        margin-top:20px;
+        font-size:28px;
+    }
+
+    .dice-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(248px, 1fr));
+        margin-bottom:28px;
+    }
+    
+  }
